@@ -29,6 +29,8 @@ Level: Extended | Next gate: G0
 
 ## Done
 
+- [x] T-016 Remove template sheet "Power - Sequencing" from KiCad; renumber pages (Revision History 7 to 6), update cover index, set sheet instance project name to 20261121_1
+
 - [x] T-015 Flatten KiCad project from hw/20261121_1/ into hw/ (DEC-006)
 
 - [x] T-013 Set KiCad text variables (REVISION v0.1, RELEASE_DATE Not released, REVIEWER, VARIANT Default), title block date/rev to variables, board2pdf output to Manufacturing/Assembly

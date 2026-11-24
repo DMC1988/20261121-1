@@ -9,8 +9,8 @@
 	(paper "A4")
 	(title_block
 		(title "${DOC_TYPE} Document")
-		(date "2024-04-13")
-		(rev "1.1")
+		(date "${RELEASE_DATE}")
+		(rev "${REVISION}")
 		(company "${COMPANY}")
 	)
 	(layers

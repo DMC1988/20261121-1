@@ -30,7 +30,7 @@ Simulator is NI Multisim 13, not LTspice: where the skill says `.asc`, read `.ms
 
 ## Toolchain
 
-- KiCad (version TBD): hw/20261121_1/
+- KiCad 10.0: hw/20261121_1/ (created from template KDT_Hierarchical; files still in 8.0 format until saved in 10.0). Title blocks use text variables; REVISION must equal the hw tag (vX.Y)
 - NI Multisim 13 (.ms13) and SPICE netlists (.cir): sim/
 - FreeCAD (version TBD): mech/
 - LibreOffice Calc: test/*.ods (export only, not source of truth)

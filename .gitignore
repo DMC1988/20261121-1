@@ -1,0 +1,76 @@
+# ============================================================
+# .gitignore — 20261121-1 Fuente de laboratorio (NYQUEN LABS template + reglas propias)
+# ============================================================
+
+# --- KiCad backups y autosave ---
+*-backups/
+_autosave-*
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.kicad_prl-bak
+fp-info-cache
+*.bck
+*.bak
+~*
+~*.lck
+*.lck
+
+# --- KiCad: archivos locales de sesion (no estado del proyecto) ---
+*.kicad_prl
+
+# --- Plot / salidas de fabricacion scratch (versionar solo via fabrication-outputs/) ---
+/hardware/plot/
+/hardware/gerbers-scratch/
+
+# --- Cache de modelos 3D ---
+*.3dshapescache
+.cache/
+
+# --- Python cache (scripting/plugins KiCad) ---
+__pycache__/
+*.pyc
+
+# --- FreeCAD ---
+*.FCBak
+*.FCStd1
+
+# --- Netlist / autorouter / exports (KiCad) ---
+*.net
+*.dsn
+*.ses
+*.xml
+*.csv
+**/*-backups/*.zip
+
+# --- LTspice ---
+*.raw
+*.op.raw
+*.fft
+*.braw
+*.~asc
+*.~asy
+# Logs de las corridas de LTspice (los de simulation/Resultados/ se versionan a mano)
+/simulation/*.log
+
+# --- PlatformIO / firmware ---
+.pio/
+.pioenvs/
+.piolibdeps/
+*.bin
+*.elf
+*.hex
+*.map
+*.o
+*.d
+
+# --- Editor / SO ---
+.vscode/
+.clang_user/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- No ignorar (recordatorio, sin efecto en git) ---
+# .kicad_pro / .kicad_sch / .kicad_pcb -> versionados
+# sym-lib-table / fp-lib-table (locales al proyecto) -> versionados

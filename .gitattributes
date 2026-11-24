@@ -1,0 +1,36 @@
+# ============================================================
+# .gitattributes — Git LFS config (NYQUEN LABS KiCad template)
+# ============================================================
+# Requiere: git lfs install (una vez por maquina) - ver README.md
+# NOTA: esto solo aplica a archivos nuevos/modificados de aca en
+# adelante. Los binarios ya versionados (STL, STEP, PDF, PNG) NO
+# se migran automaticamente a LFS con solo agregar este archivo.
+# Si queres migrar el historico, evalua "git lfs migrate import"
+# (reescribe historia, hacelo con el repo respaldado y coordinando
+# con quien mas tenga clones).
+
+# --- Formatos de texto: git normal (diff-friendly) ---
+*.kicad_sch text eol=lf
+*.kicad_pcb text eol=lf
+*.kicad_pro text eol=lf
+*.kicad_sym text eol=lf
+*.kicad_mod text eol=lf
+*.kicad_wks text eol=lf
+*.md        text eol=lf
+*.py        text eol=lf
+
+# --- Binarios / assets pesados: Git LFS ---
+*.step  filter=lfs diff=lfs merge=lfs -text
+*.stp   filter=lfs diff=lfs merge=lfs -text
+*.FCStd filter=lfs diff=lfs merge=lfs -text
+*.stl   filter=lfs diff=lfs merge=lfs -text
+*.pdf   filter=lfs diff=lfs merge=lfs -text
+*.zip   filter=lfs diff=lfs merge=lfs -text
+*.png   filter=lfs diff=lfs merge=lfs -text
+*.jpg   filter=lfs diff=lfs merge=lfs -text
+*.jpeg  filter=lfs diff=lfs merge=lfs -text
+
+# Gerbers/drill: texto pero muchos archivos chicos, LFS mantiene
+# el repo liviano si se acumulan varias revisiones.
+*.gbr   filter=lfs diff=lfs merge=lfs -text
+*.drl   filter=lfs diff=lfs merge=lfs -text

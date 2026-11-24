@@ -19,8 +19,8 @@ fp-info-cache
 *.kicad_prl
 
 # --- Plot / salidas de fabricacion scratch (versionar solo via fabrication-outputs/) ---
-/hardware/plot/
-/hardware/gerbers-scratch/
+/hw/plot/
+/hw/gerbers-scratch/
 
 # --- Cache de modelos 3D ---
 *.3dshapescache
@@ -50,7 +50,7 @@ __pycache__/
 *.~asc
 *.~asy
 # Logs de las corridas de LTspice (los de simulation/Resultados/ se versionan a mano)
-/simulation/*.log
+/sim/*.log
 
 # --- PlatformIO / firmware ---
 .pio/

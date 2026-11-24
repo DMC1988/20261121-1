@@ -16,16 +16,19 @@ Level: Extended | Next gate: G0
 ## Next
 
 - [ ] T-006 [G0] Record PRD open decisions D1, D2, D3 as DEC entries once decided
-- [ ] T-007 [G1] Map existing simulations (simulation/*.ms13, *.cir) to SIM-nn rows in docs/03 with numeric acceptance criteria
+- [ ] T-007 [G1] Map existing simulations (sim/*.ms13, *.cir) to SIM-nn rows in docs/03 with numeric acceptance criteria
 - [ ] T-008 [G1] Fill docs/02 blocks and interfaces from docs/PRD.md §6
-- [ ] T-009 Update REV_CONVENTION.md, CHANGELOG.md, fabrication-outputs/README.md and docs/PRD.md revision field to hw-vX.Y (DEC-003)
-- [ ] T-010 Record KiCad and FreeCAD versions in CLAUDE.md toolchain and mechanical/README.md
+- [ ] T-009 Update REV_CONVENTION.md, CHANGELOG.md, fab/README.md and docs/PRD.md revision field to hw-vX.Y (DEC-003)
+- [ ] T-011 Update old folder names in README.md, REV_CONVENTION.md and folder READMEs (DEC-006)
+- [ ] T-010 Record KiCad and FreeCAD versions in CLAUDE.md toolchain and mech/README.md
 
 ## Blocked
 
 ## Backlog (next revision)
 
 ## Done
+
+- [x] T-012 Rename folders to skill layout and update .gitignore path rules (DEC-006)
 
 ## Gate log
 

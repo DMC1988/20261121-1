@@ -8,7 +8,7 @@
 | Date | TBD |
 | Git commit | TBD |
 | Simulator and version | TBD |
-| Source file | simulation/SIM-nn_<block>.ms13 |
+| Source file | sim/SIM-nn_<block>.ms13 |
 | Covers REQ | REQ-nnn |
 | Models used (source, version) | TBD |
 

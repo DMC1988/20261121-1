@@ -4,20 +4,9 @@
 **Repo root:** `D:\NYQUEN\Proyectos\20261121-1`
 **Skill:** `diy-hardware-project` (modes: discuss, status, change, gate-review, release, record)
 
-## Project layout mapping (adopted project, DEC-002)
+## Project layout (adopted project, DEC-006)
 
-This project existed before the skill structure was applied. Existing folders are kept; skill paths map as follows.
-
-| Skill path | This repo |
-|---|---|
-| `hw/` | `hardware/` (KiCad project in `hardware/20261121_1/`) |
-| `hw/reports/` | `hardware/reports/` |
-| `sim/`, `sim/models/`, `sim/results/` | `simulation/`, `simulation/models/`, `simulation/results/` |
-| `test/data/`, `test/captures/` | `measurements/data/`, `measurements/captures/` |
-| `mech/`, `mech/exports/` | `mechanical/`, `mechanical/exports/` |
-| `fab/` | `fabrication-outputs/hw-vX.Y/` (one immutable folder per tag) |
-| `exports/` | `exports/` |
-| `fw/` | not created (no firmware in scope) |
+This project existed before the skill structure was applied. Folders were renamed to the skill layout: `hw/`, `sim/`, `test/`, `mech/`, `fab/`, `exports/`. KiCad project in `hw/20261121_1/`. Fab outputs in `fab/hw-vX.Y/` (one immutable folder per tag). No `fw/` (no firmware in scope).
 
 Other existing content:
 
@@ -25,10 +14,10 @@ Other existing content:
 |---|---|
 | `docs/PRD.md`, `docs/Investigacion_fuentes_de_laboratorio.md` | Source inputs (Spanish). Requirements are migrated into `docs/01`; `docs/01` is authoritative once baselined |
 | `docs/decisions/` | Not used. Decisions go in `DECISIONS.md` (DEC-005) |
-| `REV_CONVENTION.md`, `CHANGELOG.md` | Tag scheme `revX` superseded by `hw-vX.Y` (DEC-003); pending update by the user (see TASKS) |
+| `REV_CONVENTION.md`, `CHANGELOG.md`, `README.md` (structure section), folder READMEs | Tag scheme `revX` superseded by `hw-vX.Y` (DEC-003); old folder names and `revX` pending update by the user (see TASKS) |
 | `3d-renders/`, `scripts/` | Out of the skill workflow |
 
-Known repo caveats (DEC-004): `.gitignore` ignores `*.csv` and `*.xml`, so raw CSV data is not versioned; `hardware/20261121_1/.history/` is a nested git repo (KiCad local history) and is not committed.
+Known repo caveats (DEC-004): `.gitignore` ignores `*.csv` and `*.xml`, so raw CSV data is not versioned; `hw/20261121_1/.history/` is a nested git repo (KiCad local history) and is not committed. Path rules updated to `/hw/...` and `/sim/*.log` (DEC-006).
 
 Simulator is NI Multisim 13, not LTspice: where the skill says `.asc`, read `.ms13` / `.cir`.
 
@@ -41,10 +30,10 @@ Simulator is NI Multisim 13, not LTspice: where the skill says `.asc`, read `.ms
 
 ## Toolchain
 
-- KiCad (version TBD): hardware/20261121_1/
-- NI Multisim 13 (.ms13) and SPICE netlists (.cir): simulation/
-- FreeCAD (version TBD): mechanical/
-- LibreOffice Calc: measurements/*.ods (export only, not source of truth)
+- KiCad (version TBD): hw/20261121_1/
+- NI Multisim 13 (.ms13) and SPICE netlists (.cir): sim/
+- FreeCAD (version TBD): mech/
+- LibreOffice Calc: test/*.ods (export only, not source of truth)
 - Git + Git LFS
 
 ## Rules (self-contained; they apply even if the skill is not installed)

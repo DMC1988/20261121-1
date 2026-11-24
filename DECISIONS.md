@@ -45,8 +45,8 @@
 
 - **Date:** 2026-11-24
 - **Status:** Accepted
-- **Context:** .gitignore ignores `*.csv` and `*.xml` globally. hw/20261121_1/.history/ contains a nested .git (KiCad local history).
-- **Decision:** User chose not to modify .gitignore. The initial commit excludes hw/20261121_1/.history/ by pathspec (it stays untracked).
+- **Context:** .gitignore ignores `*.csv` and `*.xml` globally. hw/.history/ contains a nested .git (KiCad local history).
+- **Decision:** User chose not to modify .gitignore. The initial commit excludes hw/.history/ by pathspec (it stays untracked).
 - **Alternatives rejected:** Remove `*.csv` / `*.xml` from the global list and ignore `hw/**/.history/`.
 - **Consequences:** Raw CSV data (test/data/, sim/ exports) is not versioned, which conflicts with the evidence rule (file path + commit). Until resolved, any result relying on a CSV is Not evidenced. `.history/` appears as untracked in `git status`.
 
@@ -66,7 +66,7 @@
 - **Context:** User asked to use the skill folder names instead of mapping (supersedes DEC-002).
 - **Decision:** Renamed hardware/ to hw/, simulation/ to sim/, measurements/ to test/, mechanical/ to mech/, fabrication-outputs/ to fab/. Contents moved unchanged.
 - **Alternatives rejected:** Keep old names with a mapping table (DEC-002).
-- **Consequences:** Existing files still reference the old names: README.md (structure section), REV_CONVENTION.md and the READMEs inside each renamed folder. The .gitignore rules `/hardware/plot/`, `/hardware/gerbers-scratch/` and `/simulation/*.log` were updated to `/hw/...` and `/sim/*.log` (only those three lines changed). KiCad project paths are project-relative and unaffected.
+- **Consequences:** Existing files still reference the old names: README.md (structure section), REV_CONVENTION.md and the READMEs inside each renamed folder. The .gitignore rules `/hardware/plot/`, `/hardware/gerbers-scratch/` and `/simulation/*.log` were updated to `/hw/...` and `/sim/*.log` (only those three lines changed). KiCad project paths are project-relative and unaffected. On 2026-11-24 the KiCad project was also flattened from hw/20261121_1/ into hw/ (user request).
 
 <!-- Copy this block for each new decision:
 

@@ -6,7 +6,7 @@
 
 ## Project layout (adopted project, DEC-006)
 
-This project existed before the skill structure was applied. Folders were renamed to the skill layout: `hw/`, `sim/`, `test/`, `mech/`, `fab/`, `exports/`. KiCad project in `hw/20261121_1/`. Fab outputs in `fab/hw-vX.Y/` (one immutable folder per tag). No `fw/` (no firmware in scope).
+This project existed before the skill structure was applied. Folders were renamed to the skill layout: `hw/`, `sim/`, `test/`, `mech/`, `fab/`, `exports/`. KiCad project in `hw/`. Fab outputs in `fab/hw-vX.Y/` (one immutable folder per tag). No `fw/` (no firmware in scope).
 
 Other existing content:
 
@@ -17,7 +17,7 @@ Other existing content:
 | `REV_CONVENTION.md`, `CHANGELOG.md`, `README.md` (structure section), folder READMEs | Tag scheme `revX` superseded by `hw-vX.Y` (DEC-003); old folder names and `revX` pending update by the user (see TASKS) |
 | `3d-renders/`, `scripts/` | Out of the skill workflow |
 
-Known repo caveats (DEC-004): `.gitignore` ignores `*.csv` and `*.xml`, so raw CSV data is not versioned; `hw/20261121_1/.history/` is a nested git repo (KiCad local history) and is not committed. Path rules updated to `/hw/...` and `/sim/*.log` (DEC-006).
+Known repo caveats (DEC-004): `.gitignore` ignores `*.csv` and `*.xml`, so raw CSV data is not versioned; `hw/.history/` is a nested git repo (KiCad local history) and is not committed. Path rules updated to `/hw/...` and `/sim/*.log` (DEC-006).
 
 Simulator is NI Multisim 13, not LTspice: where the skill says `.asc`, read `.ms13` / `.cir`.
 
@@ -30,7 +30,7 @@ Simulator is NI Multisim 13, not LTspice: where the skill says `.asc`, read `.ms
 
 ## Toolchain
 
-- KiCad 10.0: hw/20261121_1/ (created from template KDT_Hierarchical; files still in 8.0 format until saved in 10.0). Title blocks use text variables; REVISION must equal the hw tag (vX.Y)
+- KiCad 10.0: hw/ (created from template KDT_Hierarchical; files still in 8.0 format until saved in 10.0). Title blocks use text variables; REVISION must equal the hw tag (vX.Y)
 - NI Multisim 13 (.ms13) and SPICE netlists (.cir): sim/
 - FreeCAD (version TBD): mech/
 - LibreOffice Calc: test/*.ods (export only, not source of truth)

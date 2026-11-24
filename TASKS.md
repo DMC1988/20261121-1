@@ -21,13 +21,15 @@ Level: Extended | Next gate: G0
 - [ ] T-009 Update REV_CONVENTION.md, CHANGELOG.md, fab/README.md and docs/PRD.md revision field to hw-vX.Y (DEC-003)
 - [ ] T-011 Update old folder names in README.md, REV_CONVENTION.md and folder READMEs (DEC-006)
 - [ ] T-010 Record FreeCAD version in CLAUDE.md toolchain and mech/README.md (KiCad 10.0 recorded)
-- [ ] T-014 [G3] At release: set RELEASE_DATE and REVISION in hw/20261121_1/20261121_1.kicad_pro to match tag hw-vX.Y before generating fab/
+- [ ] T-014 [G3] At release: set RELEASE_DATE and REVISION in hw/20261121_1.kicad_pro to match tag hw-vX.Y before generating fab/
 
 ## Blocked
 
 ## Backlog (next revision)
 
 ## Done
+
+- [x] T-015 Flatten KiCad project from hw/20261121_1/ into hw/ (DEC-006)
 
 - [x] T-013 Set KiCad text variables (REVISION v0.1, RELEASE_DATE Not released, REVIEWER, VARIANT Default), title block date/rev to variables, board2pdf output to Manufacturing/Assembly
 
